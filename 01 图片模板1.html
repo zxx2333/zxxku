@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>第一个 Highcharts 图表</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- 图表容器 DOM -->
+    <div id="container"></div>
+    <!-- 引入 highcharts.js -->
+    <script src="./Highcharts-8.2.2/code/highcharts.js"></script>
+    <script>
+var chart = Highcharts.chart('container', {
+	title: {
+		text: '2010 ~ 2016 年太阳能行业就业人员发展情况'
+	},
+	subtitle: {
+		text: '数据来源：thesolarfoundation.com'
+	},
+	yAxis: {
+		title: {
+			text: '就业人数'
+		}
+	},
+	legend: {
+		layout: 'vertical',
+		align: 'right',
+		verticalAlign: 'middle'
+	},
+	plotOptions: {
+		series: {
+			label: {
+				connectorAllowed: false
+			},
+			pointStart: 2010
+		}
+	},
+	series: [{
+		name: '安装，实施人员',
+		data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+	}, {
+		name: '工人',
+		data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+	}, {
+		name: '销售',
+		data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
+	}, {
+		name: '项目开发',
+		data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
+	}, {
+		name: '其他',
+		data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
+	}],
+	responsive: {
+		rules: [{
+			condition: {
+				maxWidth: 500
+			},
+			chartOptions: {
+				legend: {
+					layout: 'horizontal',
+					align: 'center',
+					verticalAlign: 'bottom'
+				}
+			}
+		}]
+	}
+});    </script>
+</body>
+</html>

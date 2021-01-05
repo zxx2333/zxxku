@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="600"></canvas>
+    <script>
+        var canvas = document.querySelector('canvas');
+        var ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'red';
+        // 保存状态
+        ctx.save();
+        ctx.fillRect(0, 0, 100, 100);
+        ctx.fillStyle = 'green';
+        // 保存状态
+        ctx.save();
+        ctx.fillRect(100, 100, 100, 100);
+        ctx.fillStyle = 'pink';
+        ctx.fillRect(200, 200, 100, 100);
+        // 恢复状态
+        ctx.restore();
+        ctx.restore();
+        ctx.fillRect(300, 300, 100, 100);
+
+    </script>
+</body>
+</html>
