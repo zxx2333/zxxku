@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Zxx</h1>
+        <a href="#/first">first</a>
+        <a href="#/second">second</a>
+        <a href="#/three">three</a>
+        <hr>
+        <router-view></router-view>
+    </div>
+
+    <template id="first">
+        <div>
+            <h1>header</h1>
+            <!-- 显示数据 -->
+            <h2>data: {{$route.name}}---{{$route.fullPath}}------{{$route.query.name}}</h2>
+        </div>
+    </template>
+
+    <template id="second">
+        <div>
+            <h1>main</h1>
+            <!-- 显示数据 -->
+            <h2>data: {{id}}|{{$route.name}}| {{$route.fullPath}}</h2>
+        </div>
+    </template>
+
+    <script src="./dist/15.js"></script>
+</body>
+</html>

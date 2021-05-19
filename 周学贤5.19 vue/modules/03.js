@@ -1,6 +1,6 @@
 /*
     子组件向父组件传递数据
-        1.在子组件的元素标签里定义自定义事件
+        1.在子组件的元素标签里定义自定义事件,并设置对应的函数处理
         2.在子组件的js代码中触发自定义事件，会自动触发自定义事件后面的函数
 */
 import Vue from 'vue';
@@ -40,17 +40,6 @@ let app = new Vue({
             this.msg = arg
         }
     },
-    // watch:{
-    //     msg(value){
-    //         this.msg = value;
-    //     }
-    // },
-    // watch: {
-    //     msg(value) {
-    //         console.log(value);
-    //         this.$parent.$emit('sy102', this.msg);
-    //     }
-    // },
     components:{
         child
     }

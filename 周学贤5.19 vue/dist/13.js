@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./modules/07.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./modules/13.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -141,15 +141,15 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 
 /***/ }),
 
-/***/ "./modules/07.js":
+/***/ "./modules/13.js":
 /*!***********************!*\
-  !*** ./modules/07.js ***!
+  !*** ./modules/13.js ***!
   \***********************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"../../../../../../../../node_modules/_vue@2.6.12@vue/dist/vue.js\");\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nconst child = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({\r\n    template:'#tpl',\r\n    data(){\r\n        return {\r\n            msg:'子组件 啊啊啊啊啊啊啊啊啊啊啊啊啊',\r\n            title:'子组件 title'\r\n        }\r\n    }\r\n})\r\n\r\nlet app = new  vue__WEBPACK_IMPORTED_MODULE_0___default.a({\r\n    el:'#app',\r\n    data:{\r\n        msg:'父组件 msg'\r\n    },\r\n    components:{child}\r\n})\n\n//# sourceURL=webpack:///./modules/07.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"../../../../../../../../node_modules/_vue@2.6.12@vue/dist/vue.js\");\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\n// 创建组件\r\nlet header1 = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({\r\n    template: '#header',\r\n});\r\nlet main1 = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({\r\n    template: '#main',\r\n});\r\nlet footer1 = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({\r\n    template: '#footer',\r\n});\r\n\r\nlet app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({\r\n    el:'#app',\r\n    data: {\r\n        flag: 'header1'\r\n    },\r\n    components:{\r\n        header1,main1,footer1,\r\n    }\r\n});\r\n\r\nlet router = () => {\r\n    console.log(location.hash.slice(2));\r\n    app.flag = location.hash.slice(2);\r\n}\r\nwindow.addEventListener('hashchange', router);\r\nrouter();\n\n//# sourceURL=webpack:///./modules/13.js?");
 
 /***/ })
 

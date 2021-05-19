@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>App</h1>
+        <hr>
+        <component :is="flag"></component>
+    </div>
+
+    <!-- 声明模板 -->
+    <template id="header">
+        <div>
+            <h1>我是头</h1>
+        </div>
+    </template>
+
+    <template id="main">
+        <div>
+            <h1>我是身子</h1>
+        </div>
+    </template>
+
+    <template id="footer">
+        <div>
+            <h1>我是jio</h1>
+        </div>
+    </template>
+
+
+    <script src="./dist/13.js"></script>
+</body>
+</html>

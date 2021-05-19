@@ -8,7 +8,9 @@ module.exports = {
         // 配置别名
         alias: {
             // 注意此时的 '/'为E盘
-            vue$: '/node_modules/vue/dist/vue.js'
+            vue$: '/node_modules/vue/dist/vue.js',
+            vuex$: '/node_modules/vuex/dist/vuex.js',
+            
         }
     },
     // 入口文件
@@ -20,13 +22,14 @@ module.exports = {
         "05": "./modules/05.js",
         "06": "./modules/06.js",
         "07": "./modules/07.js",
-        // "08": "./modules/08.js",
-        // "09": "./modules/09.js",
-        // "10": "./modules/10.js",
-        // "11": "./modules/11.js",
-        // "12": "./modules/12.js",
-        // "13": "./modules/13.js",
-        // "14": "./modules/14.js",
+        "08": "./modules/08.js",
+        "09": "./modules/09.js",
+        "10": "./modules/10.js",
+        "11": "./modules/11.js",
+        "12": "./modules/12.js",
+        "13": "./modules/13.js",
+        "14": "./modules/14.js",
+        "15": "./modules/15.js",
     },
     // 出口配置
     output: {
