@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Zxx</h1>
+        <router-link to="/one">one</router-link>
+        <router-link to="/two">two</router-link>
+        <router-link to="/two/a">twoa</router-link>
+        <router-link to="/b">twob</router-link>
+        <hr>
+        <transition name="bm" mode="out-in">
+            <router-view></router-view>
+        </transition>
+    </div>
+    <script src="./dist/05.js"></script>
+</body>
+</html>
